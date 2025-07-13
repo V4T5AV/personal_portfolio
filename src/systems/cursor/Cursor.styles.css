@@ -1,0 +1,54 @@
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: all 0.1s ease;
+  transform: translate(-50%, -50%);
+}
+
+.custom-cursor.hover {
+  width: 40px;
+  height: 40px;
+  background: rgba(102, 126, 234, 0.8);
+  mix-blend-mode: normal;
+}
+
+.cursor-trail {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: rgba(102, 126, 234, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transition: all 0.3s ease;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-trail.hover {
+  width: 16px;
+  height: 16px;
+  background: rgba(102, 126, 234, 0.4);
+}
+
+/* Hide default cursor on interactive elements */
+button, a, .project-card, .info-item {
+  cursor: none;
+}
+
+/* Show default cursor on mobile */
+@media (max-width: 768px) {
+  .custom-cursor,
+  .cursor-trail {
+    display: none;
+  }
+  
+  button, a, .project-card, .info-item {
+    cursor: pointer;
+  }
+} 

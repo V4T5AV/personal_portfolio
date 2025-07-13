@@ -1,0 +1,112 @@
+.section-divider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+
+/* Wave divider */
+.wave-divider {
+  width: 100%;
+  height: 100%;
+}
+
+.wave-divider svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Gradient divider */
+.gradient-divider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gradient-line {
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #667eea, #764ba2, transparent);
+  border-radius: 1px;
+  position: relative;
+}
+
+.gradient-line::before,
+.gradient-line::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  background: #667eea;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.gradient-line::before {
+  left: -4px;
+}
+
+.gradient-line::after {
+  right: -4px;
+}
+
+/* Geometric divider */
+.geometric-divider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.geometric-shape {
+  width: 12px;
+  height: 12px;
+  background: #667eea;
+  border-radius: 2px;
+  animation: geometricPulse 2s ease-in-out infinite;
+}
+
+.geometric-shape:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.geometric-shape:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.geometric-shape:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes geometricPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-divider {
+    height: 60px !important;
+  }
+  
+  .geometric-divider {
+    gap: 0.5rem;
+  }
+  
+  .geometric-shape {
+    width: 8px;
+    height: 8px;
+  }
+} 

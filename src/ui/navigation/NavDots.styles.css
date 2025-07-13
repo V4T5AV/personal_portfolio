@@ -1,0 +1,83 @@
+.nav-dots {
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-dots.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.nav-dot {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-dot:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.2);
+}
+
+.nav-dot.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+
+.dot-indicator {
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-dot.active .dot-indicator {
+  opacity: 1;
+}
+
+.dot-label {
+  position: absolute;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.nav-dot:hover .dot-label {
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-dots {
+    right: 1rem;
+  }
+  
+  .dot-label {
+    display: none;
+  }
+} 
