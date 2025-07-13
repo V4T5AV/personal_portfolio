@@ -206,12 +206,13 @@ const Certificates = () => {
           ))}
         </motion.div>
 
-        <motion.div className="certificates-cta" variants={itemVariants}>
-          <button className="view-all-certificates-btn">
+        {/* Removed the "View All Certificates" button */}
+        {/* <div className="certificates-cta">
+          <button className="view-all-button">
             <span>View All Certificates</span>
             <div className="button-arrow">→</div>
           </button>
-        </motion.div>
+        </div> */}
       </motion.div>
 
       <div className="certificates-background">
@@ -232,4 +233,4 @@ const Certificates = () => {
   )
 }
 
-export default Certificates 
+export default Certificates

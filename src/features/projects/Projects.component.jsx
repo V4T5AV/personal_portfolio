@@ -110,12 +110,13 @@ const Projects = () => {
           ))}
         </motion.div>
 
-        <motion.div className="projects-cta" variants={itemVariants}>
+        {/* Removed the "View All Projects" button */}
+        {/* <motion.div className="projects-cta" variants={itemVariants}>
           <button className="view-all-button">
             <span>View All Projects</span>
             <div className="button-arrow">→</div>
           </button>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
 
       <div className="projects-background">
@@ -136,4 +137,4 @@ const Projects = () => {
   )
 }
 
-export default Projects 
+export default Projects
