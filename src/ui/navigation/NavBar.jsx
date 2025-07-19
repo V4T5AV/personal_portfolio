@@ -1,7 +1,7 @@
 import React from 'react';
 import './NavBar.styles.css';
 
-const RESUME_LINK = 'https://drive.google.com/file/d/1dvCnQiX6PsUPE2OmmIy4q9FfIV30WGNh/view?usp=sharing';
+const RESUME_LINK = 'https://drive.google.com/file/d/1U3UZeyhxUq0UhpsdbvHJ6zU5JdC2vfvN/view?usp=sharing';
 
 const NavBar = () => (
   <nav className="main-navbar">
@@ -18,4 +18,4 @@ const NavBar = () => (
   </nav>
 );
 
-export default NavBar; 
+export default NavBar;
